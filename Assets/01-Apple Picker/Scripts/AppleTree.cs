@@ -8,11 +8,11 @@ public class AppleTree : MonoBehaviour
 
     public GameObject   applePrefab;
 
-    public float        speed = 1f;
-    public float        leftAndRightEdge = 10f;
-    public float        chanceToChangeDirection = 0.1f;
-    public float        secondsBetweenAppleDrop = 1f;
-
+    public float speed = 1f;
+    public float leftAndRightEdge = 10f;
+    public float chanceToChangeDirection = 0.1f;
+    public float secondsBetweenAppleDrop = 1f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,9 @@ public class AppleTree : MonoBehaviour
 
     void DropApple()
     {
-        GameObject apple = Instantiate < GameObject;
+        // question about this code
+
+        GameObject apple = Instantiate < GameObject
         apple.transform.position = transform.position;
         Invoke ("DropApple", secondsBetweenAppleDrop);
     }
@@ -40,7 +42,6 @@ public class AppleTree : MonoBehaviour
        {
            speed = -Mathf.Abs(speed); 
        }
-        
     }
 
     void FixedUpdate() {
