@@ -6,14 +6,14 @@ public class AppleTree : MonoBehaviour
 {
     [Header("Set in Inspector")]
 
-    public GameObject   applePrefab;
+    public GameObject applePrefab;
 
     public float speed = 1f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirection = 0.1f;
     public float secondsBetweenAppleDrop = 1f;
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         Invoke ("DropApple", 2f);
@@ -23,12 +23,12 @@ public class AppleTree : MonoBehaviour
     {
         // question about this code
 
-        GameObject apple = Instantiate < GameObject
+        GameObject apple = Instantiate < GameObject> (applePrefab):
         apple.transform.position = transform.position;
         Invoke ("DropApple", secondsBetweenAppleDrop);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Vector3 pos = transform.position;      
@@ -38,21 +38,16 @@ public class AppleTree : MonoBehaviour
         if ( pos.x < -leftAndRightEdge ) 
         {      
            speed = Mathf.Abs(speed); 
-       } else if ( pos.x > leftAndRightEdge ) 
-       {
+       } else if ( pos.x > leftAndRightEdge ) {
            speed = -Mathf.Abs(speed); 
        }
     }
 
     void FixedUpdate() {
  
-        // Changing Direction Randomly is now t
- 
         if ( Random.value < chanceToChangeDirection)
         {
- 
             speed *= -1;
- 
         }
  
     }
