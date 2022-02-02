@@ -30,15 +30,23 @@ public class ApplePicker : MonoBehaviour
     public void AppleDestroyed()
     {
         GameObject[] tAppleArray = GameObject.FindGameObjectWithTag("Apple");
+        
         foreach (GameObject tGo in tAppleArray)
         {
             Destroy(tGo);
         }
+
+        if ( basketList.Count == 0 ) {
+            SceneManager.LoadScene( "Main-ApplePicker");
+                    
+        }
+
+        int basketIndex = basketList.Count-1;
+        GameObject tBasketGO =  basketList[basketIndex];
+        basketList.RemoveAt(basketIndex);
+        Destroy(tBasketGO);
     }
-     int basketIndex = basketList.Count-1;
-    GameObject tBasketGO =  basketList[basketIndex];
-    basketList.RemoveAt (basketIndex);
-    Destroy(tBasketGO);
+     
 
     // Update is called once per frame
     void Update()
