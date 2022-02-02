@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 233294760}
   - component: {fileID: 233294759}
   - component: {fileID: 233294758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
+  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -255,7 +256,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.8204531, g: 0.8679245, b: 0.027839031, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -302,6 +303,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792234109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3befe2f10b103da46a7f828ec6e585e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 3727904279068176613, guid: 83b405eac79c7c24a84aae23c0ede1ac, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1129590902
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +330,7 @@ GameObject:
   - component: {fileID: 1129590903}
   - component: {fileID: 1129590904}
   - component: {fileID: 1129590905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AppleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +365,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -364,6 +381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a1ae9d7eda4814ba5426bcba1ecc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applePrefab: {fileID: 2851042522537590354, guid: 3c50223d9e8c0a74fbfcd4dc9fab043c, type: 3}
+  speed: 1
+  leftAndRightEdge: 20
+  chanceToChangeDirection: 0.02
+  secondsBetweenAppleDrop: 1
 --- !u!1 &1177254968
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +398,7 @@ GameObject:
   - component: {fileID: 1177254972}
   - component: {fileID: 1177254971}
   - component: {fileID: 1177254970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
