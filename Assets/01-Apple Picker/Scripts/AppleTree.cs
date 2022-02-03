@@ -8,10 +8,10 @@ public class AppleTree : MonoBehaviour
 
     public GameObject applePrefab;
 
-    public float speed = 1f;
+    public float speed = 20f;
     public float leftAndRightEdge = 10f;
-    public float chanceToChangeDirection = 0.1f;
-    public float secondsBetweenAppleDrop = 1f;
+    public float chanceToChangeDirection = 0.02f;
+    public float secondsBetweenAppleDrop = 0.5f;
     
     
     void Start()

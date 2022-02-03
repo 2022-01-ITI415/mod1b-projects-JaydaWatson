@@ -6,6 +6,7 @@ public class Apple : MonoBehaviour
 {
     [Header("Set Inspector")]
 
+    
     public static float bottomY = -20f;
 
     void Update()
