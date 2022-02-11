@@ -21,10 +21,10 @@ public class Aliens : MonoBehaviour
 
     void DropBomb()
     {
-
         GameObject bomb = Instantiate < GameObject> (bombPrefab);
         bomb.transform.position = transform.position;
         Invoke ("DropBomb", secondsBetweenBombDrop);
+
     }
 
     void Update()

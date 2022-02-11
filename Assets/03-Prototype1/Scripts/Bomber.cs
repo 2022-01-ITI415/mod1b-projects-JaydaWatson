@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Bomber : MonoBehaviour
 {
+
+    static public bool 	goalMet = false;
+
     [Header("Set Dynamically")]
     public Text scoreGT;
-    
+    public Text gameoverGT;
     public float speed = 25f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirection = 0.02f;
@@ -58,5 +61,21 @@ public class Bomber : MonoBehaviour
               }
 
         }
+
+        GameObject collidWith = coll.gameObject;
+        if (collidedWith.tag == "Projectile")
+        {
+            Destroy (collidWith);
+		    GameOver();
+		
+        }
     }
+
+    public void GameOver()
+    {
+        GameObject gameoverGO = GameObject.Find("GameOver");
+        gameoverGT = gameoverGO.GetComponent<Text>();
+        gameoverGT.text = "Game Over";
+    }
+
 }
