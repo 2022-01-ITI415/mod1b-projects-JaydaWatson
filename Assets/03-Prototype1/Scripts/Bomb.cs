@@ -6,7 +6,7 @@ public class Bomb : MonoBehaviour
 {
   [Header("Set Inspector")]
 
-    public static float bottomY = -8f;
+    public static float bottomY = -9f;
 
     void Update()
     {

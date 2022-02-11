@@ -11,7 +11,7 @@ public class Aliens : MonoBehaviour
     public float speed = 20f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirection = 0.02f;
-    public float secondsBetweenBombDrop = 0.5f;
+    public float secondsBetweenBombDrop = 10f;
     
     
     void Start()
