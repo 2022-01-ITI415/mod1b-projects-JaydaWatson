@@ -4,13 +4,34 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    static public GameObject POI;
+
+    [Header("Set Dynamically")]
+
+    public float camZ;
+
+    void Awake()
+    {
+        camZ = this.transform.position.z;
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (POI == null) return;
+
+        Vector3 destination = POI.transform.position;
+
+        destination.z = camZ;
+
+        transform.position = destination;
+    }
+  
     void Update()
     {
         
