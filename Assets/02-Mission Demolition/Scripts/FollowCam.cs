@@ -30,7 +30,7 @@ public class FollowCam : MonoBehaviour
     {
         if (POI == null) return;
 
-        Vector3 destination = POI.transform.position;
+        
 
         Vector3 destination;
 

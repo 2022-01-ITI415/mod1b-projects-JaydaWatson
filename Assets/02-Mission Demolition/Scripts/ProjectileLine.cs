@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProjectileLine : MonoBehaviour
 {
+    static public ProjectileLine S;
+    
     [Header("Set in Inspector")]
 
     public float minDist = .1f;
