@@ -7,6 +7,7 @@ TagManager:
   - Apple
   - Projectile
   - Bomb
+  - Body
   layers:
   - Default
   - TransparentFX
