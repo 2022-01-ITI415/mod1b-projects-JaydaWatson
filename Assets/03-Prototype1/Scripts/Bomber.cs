@@ -75,7 +75,7 @@ public class Bomber : MonoBehaviour
     {
         GameObject gameoverGO = GameObject.Find("GameOver");
         gameoverGT = gameoverGO.GetComponent<Text>();
-        gameoverGT.text = "Game Over";
+        gameoverGT.text = "Game Over, You Win!";
     }
 
 }
